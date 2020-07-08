@@ -1,6 +1,6 @@
 // Spotify Client ID and redirect URI
 const clientId = "deca63a4222f4471856891dec379d5ba";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "http://space_jammming.surge.sh";
 
 // user's access token
 let accessToken;
