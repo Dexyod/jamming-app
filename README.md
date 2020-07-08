@@ -4,4 +4,4 @@ A Codecademy project to create a playlist creator for Spotify
 
 # Deployed Build
 
-[space jammming]: http://space_jammming.surge.sh/
+[Space Jammming](http://space_jammming.surge.sh/)
