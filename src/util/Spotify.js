@@ -1,6 +1,7 @@
 // Spotify Client ID and redirect URI
-const clientId = "deca63a4222f4471856891dec379d5ba";
-const redirectUri = "http://space_jammming.surge.sh";
+const clientId = "9bef37f9207a4981a1be5d490257ef58";
+// const redirectUri = "http://space_jammming.surge.sh";
+const redirectUri = "http://localhost:3000/";
 
 // user's access token
 let accessToken;
@@ -44,16 +45,19 @@ const Spotify = {
       }
     );
     const jsonResponse = await response.json();
-    console.log(jsonResponse);
+
     if (!jsonResponse.tracks) {
       return [];
     }
+    console.log(jsonResponse);
     return jsonResponse.tracks.items.map((track) => ({
       id: track.id,
       name: track.name,
       artist: track.artists[0].name,
       album: track.album.name,
       uri: track.uri,
+      preview: track.preview_url,
+      image: track.album.images[0].url,
     }));
   },
 
@@ -82,6 +86,7 @@ const Spotify = {
     );
     const jsonResponse_1 = await response_1.json();
     const playlistID = jsonResponse_1.id;
+    console.log(jsonResponse_1);
     return fetch(
       `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,
       {

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactAudioPlayer from "react-audio-player";
 import "./Track.css";
 
 export class Track extends Component {
@@ -32,7 +33,6 @@ export class Track extends Component {
   removeTrack() {
     this.props.onRemove(this.props.track);
   }
-
   render() {
     return (
       <div className="Track">
@@ -41,6 +41,15 @@ export class Track extends Component {
           <p>
             {this.props.track.artist} | {this.props.track.album}
           </p>
+          {/* <img src={this.props.track.image} alt={this.props.track.name} /> */}
+          <ReactAudioPlayer
+            src={this.props.track.preview}
+            controls
+            width="300px"
+            height="80px"
+            className="preview"
+            display="absolute"
+          />
         </div>
         {this.renderAction()}
       </div>

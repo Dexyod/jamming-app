@@ -31,7 +31,17 @@
 }
 
 .Track-information p {
+  display: flex;
   font-size: 0.83rem;
   font-weight: 300;
   color: rgba(256, 256, 256, 0.8);
+}
+audio {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 75%;
+  height: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 90px;
+  transform: scale(1.05);
+  margin: auto;
 }

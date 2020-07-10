@@ -12,7 +12,7 @@ A Codecademy project to create a playlist creator for Spotify
 
 ## Future Features
 
--[] Include preview samples for each track
+-[x] Include preview samples for each track
 
 -[] Only display songs not currently present in the playlist in the search results
 
